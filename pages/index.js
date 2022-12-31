@@ -8,7 +8,7 @@ export default class Home extends Component {
         <Head>
           <title></title>
         </Head>
-        hello
+        hello World :)
       </>
     );
   }
