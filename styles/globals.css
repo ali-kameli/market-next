@@ -1,0 +1,21 @@
+.offcanvas.offcanvas-end {
+  left: 0 !important;
+}
+
+@font-face {
+  font-family: "Nexa-Regular";
+  src: url("~/public/fonts/nexa-regular.otf");
+}
+@font-face {
+  font-family: "Nexa-Bold";
+  src: url("~/public/fonts/nexa-bold.otf");
+}
+@font-face {
+  font-family: "Nexa-Light";
+  src: url("~/public/fonts/nexa-light.otf");
+} 
+
+/* global sidebar style   */
+.navbar-expand-lg .offcanvas{
+  width:80% !important
+}
