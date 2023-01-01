@@ -1,21 +1,13 @@
-import Head from "next/head";
-import React, { Component } from "react"; 
+import Head from 'next/head';
 
-export default class Home extends Component {
-  render() {
-    return (
-      <>
-        <Head>
-          <title></title>
-        </Head>
-        hello
-      </>
-    );
-  }
-};
+const HomePage = () => {
+  return (
+    <>
+      <Head>
+        <title>Home</title>
+      </Head>
+    </>
+  );
+}
 
-export async function getServerSideProps(context) {
-  return {
-    props: {}
-  };
-};
+export default HomePage;

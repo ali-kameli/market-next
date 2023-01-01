@@ -1,15 +1,15 @@
-import React, { Component } from "react";
-import "../styles/globals.css";;
+import Layout from "../src/Components/Layout";
+import "../styles/globals.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
-class App extends Component {
-  render() {
-    const { Component, pageProps } = this.props;
 
-    return (
-      <>
-          <Component {...pageProps} />
-      </>
-    );
-  }
+const App = ({ Component, pageProps }) => {
+  
+  return (
+    <Layout>
+      <Component {...pageProps} />
+    </Layout>
+  );
 }
+
 export default App;
