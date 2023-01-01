@@ -1,0 +1,114 @@
+.container_footer {
+    width: 100%;
+    background-color: #0b032d !important;
+    clip-path: ellipse(113% 71% at -1% 70%);
+    text-align: right;
+    padding-top: 7rem !important;
+    direction: rtl;
+}
+
+@media (max-width: 1000px) {
+    .container_footer {
+        clip-path: ellipse(121% 71% at 1% 70%);
+    }
+}
+
+@media (max-width: 770px) {
+    .container_footer {
+        clip-path: ellipse(129% 71% at 4% 70%);
+    }
+
+    .footer_text {
+        padding-right: 1rem !important;
+    }
+}
+
+@media (max-width: 660px) {
+    .container_footer {
+        clip-path: ellipse(139% 71% at 9% 70%);
+    }
+}
+
+.link{
+    color: black;
+    text-decoration: none;
+}
+
+
+.footer_text,
+.service_footer,
+.service_footer a {
+    color: white !important;
+    display: inline-grid;
+    text-align: left;
+    line-height: 1.9;
+}
+
+.service_footer a:hover {
+    color: #fe0048 !important;
+}
+
+.section_footer {
+    display: flex;
+    place-items: center !important;
+    text-align: right !important;
+    border-radius: 10px;
+    box-shadow: rgb(50 50 93 / 25%) 4px 4px 10px -4px;
+    justify-content: end !important;
+    transition: all 0.2s;
+    margin-bottom: 2rem !important;
+    padding-inline: 1.3rem;
+}
+
+.section_footer:hover {
+    transform: translateY(-4px);
+    box-shadow: rgb(0 0 0 / 30%) 9px 15px 24px 0px;
+}
+
+.fa_footer {
+    font-size: x-large;
+    margin-inline: 10px;
+    color: #fe0048 !important;
+
+    font-size: xx-large;
+    margin-bottom: 25px;
+    margin-left: 10px;
+}
+
+.icon_footer {
+    font-size: 20px;
+    margin-left: 9px;
+    color: gray;
+}
+
+.service_moshavere {
+    color: #fff;
+    padding-left: 5px;
+    border-left: 5px solid #fe0048;
+}
+
+.footer_develooper {
+    color: #fe0048;
+    margin-top: 1.5rem;
+    text-align: center;
+    unicode-bidi: plaintext;
+}
+
+.row_foter {
+    place-content: center !important;
+}
+
+@media (max-width: 768px) {
+    .footer_text {
+        padding-right: 6rem;
+    }
+}
+
+.footer_text p {
+    text-align: justify;
+}
+
+.footer_text h3,
+.service_moshavere {
+    font-weight: bolder;
+}
