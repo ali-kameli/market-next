@@ -1,0 +1,23 @@
+.store_product {
+    text-align: center;
+    margin-right: 15px;
+    text-align: -webkit-center;
+    position: relative;
+}
+
+.container_store_product {
+    box-shadow: rgb(50 50 93 / 25%) 1px 1px 19px -4px;
+    border-radius: 1rem;
+}
+ 
+#stor-sort-list {
+    display: flex;
+}
+
+#dropdown-basic,
+#dropdown {
+    background: none;
+    color: #000;
+    border: none;
+    padding-top: 0;
+}
