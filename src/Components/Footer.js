@@ -1,3 +1,4 @@
+import Link from "next/link";
 import style from "./Footer.module.css";
 
 
@@ -51,21 +52,21 @@ const Footer = () => {
                 <div className={`row pt-5 ${style.row_footer}`}>
                     <div className={`col-12 col-md-3 ${style.service_footer}`}>
                         <h3 className={style.service_moshavere}>services</h3>
-                        <a className={style.link} href="/#">Comprehensivr Guide</a>
-                        <a className={style.link} href="/#">Common Question</a>
-                        <a className={style.link} href="/#">Privacy Policy </a>
+                        <Link className={style.link} href="/#" passHref>Comprehensivr Guide</Link>
+                        <Link className={style.link} href="/#" passHref>Common Question</Link>
+                        <Link className={style.link} href="/#" passHref>Privacy Policy </Link>
                     </div>
                     <div className={`col-12 col-md-3 ${style.service_footer}`}>
                         <h3 className={style.service_moshavere}> Buy Guide</h3>
-                        <a className={style.link} href="/#">Payment Method</a>
-                        <a className={style.link} href="/#"> Post products</a>
-                        <a className={style.link} href="/#">product Warranty</a>
+                        <Link className={style.link} href="/#" passHref>Payment Method</Link>
+                        <Link className={style.link} href="/#" passHref> Post products</Link>
+                        <Link className={style.link} href="/#" passHref>product Warranty</Link>
                     </div>
                     <div className={`col-12 col-md-3 ${style.service_footer}`}>
                         <h3 className={style.service_moshavere}> Buy Guide</h3>
-                        <a className={style.link} href="/#">Payment Method</a>
-                        <a className={style.link} href="/#"> Post products</a>
-                        <a className={style.link} href="/#">product Warranty</a>
+                        <Link className={style.link} href="/#" passHref>Payment Method</Link>
+                        <Link className={style.link} href="/#" passHref> Post products</Link>
+                        <Link className={style.link} href="/#" passHref>product Warranty</Link>
                     </div>
                     <div className={`col-12 col-md-3 ${style.footer_text}`}>
                         <h3>Market</h3>
