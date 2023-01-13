@@ -1,8 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { isInCart, quantityCount } from "./../helpers/functions";
 import { CartContext } from "./../context/CartContextProvider";
-// import "./product.css";
-// import shop from "../assets/addtocart.png";
+import shop from "../assets/addtocart.png";
 // import {
 //   EmailIcon, 
 //   LinkedinIcon,
@@ -109,49 +108,7 @@ const Product = ({ productData }) => {
           </span>
           <span className="product-share-btn" >
             <i className="fa fa-share-alt" onClick={handleShow}></i>
-            <Modal show={show} onHide={handleClose}>
-              <Modal.Header>
-                <Modal.Title>Share via:</Modal.Title>
-              </Modal.Header>
-              <Modal.Body className="modal-body-share">
-                {/* whatsapp  */}
-                <WhatsappShareButton
-                  url={`${shareLink}/${productData.id}`}
-                  hashtags={["hashtag1", "hashtag2"]}
-                >
-                  <WhatsappIcon size={32} round />
-                </WhatsappShareButton>
-
-                {/* Linkedin  */}
-                <LinkedinShareButton
-                  url={`${shareLink}/${productData.id}`}
-                  hashtags={["hashtag1", "hashtag2"]}
-                >
-                  <LinkedinIcon size={32} round />
-                </LinkedinShareButton>
-                {/* Telegram  */}
-                <TelegramShareButton
-                  url={`${shareLink}/${productData.id}`}
-                  hashtags={["hashtag1", "hashtag2"]}
-                >
-                  <TelegramIcon size={32} round />
-                </TelegramShareButton>
-                {/* Telegram  */}
-                <TwitterShareButton
-                  url={`${shareLink}/${productData.id}`}
-                  hashtags={["hashtag1", "hashtag2"]}
-                >
-                  <TwitterIcon size={32} round />
-                </TwitterShareButton>
-                {/* Email  */}
-                <EmailShareButton
-                  url={`${shareLink}/${productData.id}`}
-                  hashtags={["hashtag1", "hashtag2"]}
-                >
-                  <EmailIcon size={32} round />
-                </EmailShareButton>
-              </Modal.Body>
-            </Modal>
+          
           </span>
 
           <span className="product-heart-btn" onClick={() => { setHeart(!heart) }}>
