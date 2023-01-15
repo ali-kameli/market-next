@@ -26,10 +26,10 @@
 
  .shopping_cart_navbar {
      color: #818181;
-     font-size: xx-large;
+     font-size: x-large;
      cursor: pointer;
      position: absolute;
-     margin: 5px 0px 0px 0px;
+     margin: 5px 8px;
  }
 
  .counter {
@@ -62,6 +62,7 @@
      color: black;
      min-width: max-content;
      margin-top: 1px;
+     text-decoration: none;
      align-items: center;
  }
 

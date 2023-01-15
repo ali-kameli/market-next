@@ -3,8 +3,9 @@ import Link from "next/link";
 import React, { useContext, useEffect } from "react";
 import Ticker from "react-ticker";
 // import { CartContext } from "./../context/CartContextProvider";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBasketShopping, faUser } from '@fortawesome/free-solid-svg-icons'
 import style from "./Navbar.module.css";
-
 
 const NavbarSection = ({ search, searchHandler }) => {
     // const { state } = useContext(CartContext);
@@ -12,15 +13,6 @@ const NavbarSection = ({ search, searchHandler }) => {
 
     return (
         <div>
-
-            {/* News ticker slider */}
-            {/* <Ticker offset="run-in" speed={10}>
-                {() => (
-                   ( <div>sss</div>)
-                )
-                }
-            </Ticker> */}
-            {/*  Navbar */}
             <nav className={`navbar justify-content-between px-3`}>
                 <a className={`navbar-brand ${style.navbar_brand}`}>
                     <Link
@@ -30,8 +22,8 @@ const NavbarSection = ({ search, searchHandler }) => {
                         <Image
                             src='/assets/logo.png'
                             alt='logo'
-                            width={120}
-                            height={120}
+                            width={110}
+                            height={21}
                         />
                     </Link>
                 </a>
@@ -45,7 +37,7 @@ const NavbarSection = ({ search, searchHandler }) => {
                     />
                     <ul className={`mt-1 ${style.ul_login}`}>
                         <span>
-                            <i className={`fa fa-user-o ${style.fa_user_navbar}`}></i>
+                            <FontAwesomeIcon icon={faUser} className={style.fa_user_navbar} />
                         </span>
                         <div className={style.login}>
                             <Link
@@ -60,7 +52,7 @@ const NavbarSection = ({ search, searchHandler }) => {
                     <span className={style.cart_navbar}>
                         <Link href="/cart">
                             <>
-                                <i className={`fa fa-shopping-cart ${style.shopping_cart_navbar}`}></i>
+                                <FontAwesomeIcon icon={faBasketShopping} className={style.shopping_cart_navbar} />
                                 {/* <p className={style.counter}>{state.itemsCounter}</p> */}
                             </>
                         </Link>
