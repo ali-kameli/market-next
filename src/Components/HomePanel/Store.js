@@ -67,9 +67,9 @@ const Store = (props) => {
                                                 {brand}
                                             </Dropdown.Toggle>
                                             <Dropdown.Menu>
-                                                {sort.brands.map(brandProduct => (
+                                                {sort.brands.map((brandProduct, index) => (
                                                     <Dropdown.Item
-                                                        onClick={() => { setBrand(brandProduct.brand) }}
+                                                        onClick={() => { setBrand(brandProduct.brand) }} key={index}
                                                     >
                                                         {brandProduct.brand}
                                                     </Dropdown.Item>
@@ -83,9 +83,9 @@ const Store = (props) => {
                                                     {category}
                                                 </Dropdown.Toggle>
                                                 <Dropdown.Menu>
-                                                    {sort.categories.map(categoryProduct => (
+                                                    {sort.categories.map((categoryProduct, index) => (
                                                         <Dropdown.Item
-                                                            onClick={() => setCategory(categoryProduct.category)}
+                                                            onClick={() => setCategory(categoryProduct.category)} key={index}
                                                         >
                                                             {categoryProduct.category}
                                                         </Dropdown.Item>
@@ -103,17 +103,17 @@ const Store = (props) => {
                     {
                         brand !== "all brands" ?
                             searchProducts.filter(p => p.brand === brand).map((product) => (
-                                <div className={style.store_product}>
+                                <div className={style.store_product} key={product.id}>
                                     <Product key={product.id} productData={product} />
                                 </div>
                             )) :
                             category !== "all categories" ?
                                 searchProducts.filter(p => p.category === category).map((product) => (
-                                    <div className={style.store_product}>
+                                    <div className={style.store_product} key={product.id}>
                                         <Product key={product.id} productData={product} />
                                     </div>
                                 )) : searchProducts.map((product) => (
-                                    <div className={style.store_product}>
+                                    <div className={style.store_product} key={product.id}>
                                         <Product key={product.id} productData={product} />
                                     </div>
                                 ))
