@@ -26,17 +26,17 @@ const Landing = () => {
               </ol>
               <div className="carousel-inner">
                 <div className={`carousel-item ${style.carousel_item} active`}>
-                  <img
+                  <Image width={200} height={100}
                     src='/assets/banner/samsung-banner.webp'
                     alt="banner"
                     className="d-block w-100"
                   />
                 </div>
                 <div className={`carousel-item ${style.carousel_item}`}>
-                  <img src='/assets/banner/home.jpg' alt="img3" className="d-block w-100" />
+                  <Image width={200} height={100} src='/assets/banner/home.jpg' alt="img3" className="d-block w-100" />
                 </div>
                 <div className={`carousel-item ${style.carousel_item} `}>
-                  <img src='/assets/banner/b2.jpg' alt="img2" className="d-block w-100" />
+                  <Image width={200} height={100} src='/assets/banner/b2.jpg' alt="img2" className="d-block w-100" />
                 </div>
                 <a
                   class="carousel-control-prev"
@@ -68,8 +68,8 @@ const Landing = () => {
           <div className={`row  my-5 ${style.service_card}`}>
             {
               Data.getService().map(service => (
-                <span>
-                  <Image src={service.image} key={service.id} alt='service' width={48} height={48} />
+                <span key={service.id}>
+                  <Image src={service.image}  alt='service' width={48} height={48} />
                   <h6>{service.name}</h6>
                 </span>
               ))
