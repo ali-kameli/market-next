@@ -25,7 +25,7 @@ const Store = (props) => {
         product.title.toLowerCase().includes(search.toLocaleLowerCase())
     );
 
-    const { pathname } = props.location;
+    // const { pathname } = props.location;
     const getChoiceSort = (e) => {
         setActiveSort(e.target.innerHTML);
     }
