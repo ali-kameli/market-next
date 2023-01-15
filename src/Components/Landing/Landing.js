@@ -1,7 +1,7 @@
 import React from "react";
 import style from "./Landing.module.css";
 import Off from "./off%/off";
-import { Data } from "../../api/Data";
+import { Data } from "../../Api/Data";
 import Image from "next/image";
 
 const Landing = () => {

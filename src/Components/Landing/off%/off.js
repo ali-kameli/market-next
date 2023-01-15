@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import style from "./off.module.css";
 import OffProduct from "./offProduct";
-import { Data } from "../../../api/Data";
+import { Data } from "../../../Api/Data";
 import Image from "next/image";
 
 const Off = () => {
