@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { shorten } from "./../helpers/functions";
 import { CartContext } from "./../context/CartContextProvider";
 import "./Cart.css";
+import Image from "next/image";
 
 const Cart = (props) => {
   const { dispatch } = useContext(CartContext);
@@ -11,7 +12,7 @@ const Cart = (props) => {
 
   return (
     <div className=" cart-basket-container ">
-      <img src={image} alt="product" className="productImage " />
+      <Image width={50} height={50} src={image} alt="product" className="productImage " />
       <div className="data">
         {/* <h6>{shorten(title)}</h6> */}
         <h6>{title}</h6>

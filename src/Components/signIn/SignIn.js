@@ -5,6 +5,7 @@ import { signin } from "../../services/userServices";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { withRouter, useHistory, Link } from "react-router-dom";
+import Link from "next/link";
 
 const SignIn = () => {
   const [email, setEmail] = useState("");
@@ -122,7 +123,7 @@ const SignIn = () => {
             {/*End password input group  */}
             {/* bootstrap modal  */}
             <div className="col-12  my-4 link-all-helper">
-              <a
+              <Link
                 href="/#"
                 type="button"
                 className=""
@@ -130,7 +131,7 @@ const SignIn = () => {
                 data-target="#myModal"
               >
                 read me
-              </a>
+              </Link>
               <div className="modal" id="myModal">
                 <div className="modal-dialog">
                   <div className="modal-content">

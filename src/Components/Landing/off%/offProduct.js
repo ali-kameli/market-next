@@ -4,6 +4,7 @@ import { isInCart, quantityCount } from "../../helpers/functions";
 // import shop from "../../assets/addtocart.png";
 import style from "./OffProduct.module.css"
 import Link from "next/link";
+import Image from "next/image";
 
 const OffProduct = ({ productData }) => {
   // const { state, dispatch } = useContext(CartContext);
@@ -12,7 +13,7 @@ const OffProduct = ({ productData }) => {
     <div className={` ${style.product_cart} mr-2 my-3 pt-4 pb-1`}>
       <Link href={`/products/${productData.id}`} className={style.link_product} passHref>
         <div className={style.off_product}>
-          <img src={productData.image} alt="product" className="p-3 mb-4" />
+          <Image width={120} height={120} src={productData.image} alt="product" className="p-3 mb-4" />
           <p style={{ fontSize: "smaller", height: "5rem" }}>
             {productData.title}
           </p>
