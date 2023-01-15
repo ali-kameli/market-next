@@ -3,7 +3,7 @@ import React, { Fragment, useContext, useState } from "react";
 // import Navbar from "../Navbar/Navbar";
 // import Landing from "../Landing/Landing";
 import { Dropdown } from "react-bootstrap";
-import { Data } from "../../api/Data";
+import { Data } from "../../Api/Data";
 import Product from "./Product";
 import style from "./Store.module.css";
 
