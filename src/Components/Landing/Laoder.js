@@ -1,18 +1,18 @@
 import React from "react";
-import "./Loader.css"
+import style from "./Loader.module.css"
 
 const Loader = () => {
   return (
     <section id="global">
-      <div id="top" class="mask">
-        <div class="plane"></div>
+      <div id="top" className={style.mask}>
+        <div className={style.plane}></div>
       </div>
-      <div id="middle" class="mask">
-        <div class="plane"></div>
+      <div id="middle" className={style.mask}>
+        <div className={style.plane}></div>
       </div>
 
-      <div id="bottom" class="mask">
-        <div class="plane"></div>
+      <div id="bottom" className={style.mask}>
+        <div className={style.plane}></div>
       </div>
 
       <p >
