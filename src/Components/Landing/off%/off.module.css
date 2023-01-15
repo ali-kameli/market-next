@@ -1,0 +1,44 @@
+.off_landing {
+  background-color: #a60025 !important;
+}
+
+.text-off {
+  font-size: xx-large;
+  font-family: "sahel";
+  color: white;
+}
+
+.off_side {
+  align-self: center;
+}
+
+.img_off {
+  height: 15rem !important;
+}
+
+.off_resp {
+  overflow-x: auto;
+}
+
+.off_resp::-webkit-scrollbar {
+  width: 1px;
+  background-color: white;
+  border-radius: 15px;
+}
+
+/* Track */
+.off_resp::-webkit-scrollbar-track {
+  box-shadow: inset 1px 1px 3px 5px rgb(249, 249, 249);
+  border-radius: 15px;
+}
+
+/* Handle */
+.off_resp::-webkit-scrollbar-thumb {
+  background: #fe0048;
+  border-radius: 15px;
+}
+
+/* Handle on hover */
+.off_resp::-webkit-scrollbar-thumb:hover {
+  background: #b50034;
+}

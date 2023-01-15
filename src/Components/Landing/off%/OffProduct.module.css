@@ -1,0 +1,26 @@
+.link_product>img {
+    width: 170px !important;
+    height: 167px !important;
+}
+
+.product_cart {
+    min-width: 180px;
+    max-width: 200px;
+}
+
+.off_product>img {
+    width: 150px !important;
+    height: 150px !important;
+}
+
+@media (max-width:426px) {
+    .off_product>img {
+        width: 130px !important;
+        height: 130px !important;
+    }
+
+    .product_cart {
+        padding: 0 !important;
+    }
+
+}

@@ -1,0 +1,96 @@
+.container-sign-in {
+  /* background-image: url(../assets/jj.jpg); */
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+  min-height: 40rem;
+}
+.cover-signin {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.4);
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+}
+
+.container-sign-in .row {
+  justify-content: center;
+}
+.div-sigin-form {
+  max-width: 380px;
+  width: 100%;
+  background-color: #f0f0f0;
+  margin: 10px 0;
+  height: 55px;
+  border-radius: 55px;
+  display: grid;
+  grid-template-columns: 15% 85%;
+  padding: 0 0.4rem;
+  position: relative;
+  direction: rtl;
+}
+.forms-in-sign {
+  box-shadow: rgb(50 50 93 / 78%) 0px 0px 2.5rem 1rem;
+  background-color: #f9f9f9;
+  border-radius: 1rem;
+}
+.div-sigin-form i {
+  text-align: center;
+  line-height: 55px;
+  color: rgb(104, 104, 104);
+  /* transition: 0.5s; */
+  font-size: 1.1rem;
+  background-color: rgb(209, 209, 209);
+  border-radius: 0 1rem 1rem 0;
+}
+.div-sigin-form input {
+  border-radius: 1rem 0 0 1rem;
+  background-color: rgb(209, 209, 209);
+}
+.div-sigin-form {
+  background: none;
+  outline: none;
+  border: none;
+  line-height: 1;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 2.5rem !important;
+}
+.div-form-signin {
+  text-align: -webkit-center;
+}
+.btn-sign-in {
+  width: 23rem;
+  max-width: 100%;
+  display: block;
+  height: 47px;
+  border-radius: 1rem;
+}
+.helper-signin {
+  display: grid;
+ 
+}
+.link-all-helper {
+  text-align: left;
+  /* margin-right: -13rem; */
+}
+.link-all-helper a {
+  color: black !important;
+  cursor: pointer;
+}
+.link-all-helper a:hover {
+  color: rgb(102, 102, 102) !important;
+}
+.forms-in-sign h2 {
+  color: rgb(0, 0, 0) !important;
+  margin-bottom: 2rem;
+}
+input:hover {
+  background-color: rgb(218, 218, 218) !important;
+  border: none !important;
+}
+input:focus {
+  border: none !important;
+}

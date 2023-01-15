@@ -38,7 +38,7 @@ const Product = ({ productData }) => {
     <div className="product-cart my-3 pt-4 pb-1">
       <Link href={`/products/${productData.id}`} className="link-product">
         <>
-          <Image src={productData.image} alt="product" className="p-3 mb-4" />
+          <Image src={productData.image} alt="product" className="p-3 mb-4" layout="fill" />
           {/* <Rating name="read-only" value='2' readOnly /> */}
 
           <p style={{ fontSize: "smaller", height: "2.5rem" }}>
