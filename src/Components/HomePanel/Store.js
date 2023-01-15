@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React, { Fragment, useContext, useState } from "react";
 // import { ProductContext } from "./../context/ProductsContextProvider";
 // import Navbar from "../Navbar/Navbar";
@@ -36,12 +37,16 @@ const Store = (props) => {
 
             <div className={`container-fluid  ${style.container_store_product}`}>
                 <div className="row" style={{ textAlign: "center", justifyContent: "center" }}>
-                    <img
+                    <Image
+                        width={30}
+                        height={30}
                         src="/assets/banner/b1.jpg"
                         className="col-12 col-md-6 mb-2 mb-md-0 ad-image-landing"
                         alt="samsung-galaxy"
                     />
-                    <img
+                    <Image
+                        width={30}
+                        height={30}
                         src="/assets/banner/b2.jpg"
                         className="col-12 col-md-6 ad-image-landing"
                         alt="samsung-galaxy"

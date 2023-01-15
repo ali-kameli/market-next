@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import React, { useContext, useEffect } from "react";
 import Ticker from "react-ticker";
@@ -26,10 +27,11 @@ const NavbarSection = ({ search, searchHandler }) => {
                         className={style.navbar_logo}
                         href="/products"
                     >
-                        <img
+                        <Image
                             src='/assets/logo.png'
                             alt='logo'
-                            width='120px'
+                            width={120}
+                            height={120}
                         />
                     </Link>
                 </a>

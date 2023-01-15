@@ -17,6 +17,7 @@ import {
 import { Modal } from 'react-bootstrap';
 import { toast } from "react-toastify";
 import Link from "next/link";
+import Image from "next/image";
 // import { Rating } from "@mui/material";
 
 const Product = ({ productData }) => {
@@ -37,7 +38,7 @@ const Product = ({ productData }) => {
     <div className="product-cart my-3 pt-4 pb-1">
       <Link href={`/products/${productData.id}`} className="link-product">
         <>
-          <img src={productData.image} alt="product" className="p-3 mb-4" />
+          <Image src={productData.image} alt="product" className="p-3 mb-4" />
           {/* <Rating name="read-only" value='2' readOnly /> */}
 
           <p style={{ fontSize: "smaller", height: "2.5rem" }}>

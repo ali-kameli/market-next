@@ -29,7 +29,7 @@
     }
 }
 
-.link{
+.link {
     color: black;
     text-decoration: none;
 }
@@ -54,7 +54,7 @@
     text-align: right !important;
     border-radius: 10px;
     box-shadow: rgb(50 50 93 / 25%) 4px 4px 10px -4px;
-    justify-content: end !important;
+    justify-content: flex-end !important;
     transition: all 0.2s;
     margin-bottom: 2rem !important;
     padding-inline: 1.3rem;
