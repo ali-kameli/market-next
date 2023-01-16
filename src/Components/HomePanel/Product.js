@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { isInCart, quantityCount } from "../helpers/functions";
-// import { CartContext } from "./../context/CartContextProvider";
+import { CartContext } from "../context/CartContextProvider";
 // import shop from "../assets/addtocart.png";
 import {
   EmailIcon,
@@ -107,7 +107,8 @@ const Product = ({ productData }) => {
                       theme: "colored",
                     })
                   }
-                }></i>
+                }
+                ></i>
             </button>
           </span>
           <span className={style.product_share_btn}>

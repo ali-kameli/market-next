@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React, { Fragment, useContext, useState } from "react";
-// import { ProductContext } from "./../context/ProductsContextProvider";
+import { ProductContext } from "./../context/ProductsContextProvider";
 // import Navbar from "../Navbar/Navbar";
 // import Landing from "../Landing/Landing";
 import { Dropdown } from "react-bootstrap";
@@ -10,7 +10,7 @@ import style from "./Store.module.css";
 
 
 const Store = (props) => {
-    //   const products = useContext(ProductContext);
+      const products = useContext(ProductContext);
     // const search = useContext(SearchContext);
 
     const [search, setSearch] = useState("");
