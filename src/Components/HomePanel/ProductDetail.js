@@ -7,7 +7,7 @@ import Data from "../../Api/Data";
 import ProductDetailCard from "./productDetailCard";
 import { toast } from "react-toastify";
 import Image from "next/image";
-import style from "./ProductDetails.module.css";
+import style from "./ProductDetail.module.css";
 
 const ProductDetails = ({ detail }) => {
   // const { state, dispatch } = useContext(CartContext);

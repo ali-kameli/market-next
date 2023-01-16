@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { Data } from "../src/Api/Data";
-import ProductDetails from "../src/Components/HomePanel/ProductDetails";
+import ProductDetail from "../src/Components/HomePanel/ProductDetail";
 
 const DetailPage = ({ detail }) => {
     return (
@@ -8,7 +8,7 @@ const DetailPage = ({ detail }) => {
             <Head>
                 <title>Product Detail</title>
             </Head>
-            <ProductDetails detail={detail} />
+            <ProductDetail detail={detail} />
         </>
     );
 }
