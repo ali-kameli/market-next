@@ -18,7 +18,7 @@ import { Modal } from 'react-bootstrap';
 import { toast } from "react-toastify";
 import Link from "next/link";
 import Image from "next/image";
-import style from "./Product.module.css";
+import style from "./Productcss.module.css";
 // import { Rating } from "@mui/material";
 
 const Product = ({ productData }) => {
