@@ -108,7 +108,7 @@ const Product = ({ productData }) => {
                     })
                   }
                 }
-                ></i>
+              ></i>
             </button>
           </span>
           <span className={style.product_share_btn}>
