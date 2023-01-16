@@ -4,7 +4,7 @@ import React, { useContext, useEffect, useState } from "react";
 // import shop from "./assets/addtocart.png";
 import Data from "../../Api/Data";
 // import { isInCart, quantityCount } from "./helpers/functions";
-import ProductDetailCard from "./productDetailCard";
+import ProductDetailCard from "./ProductDetailCard";
 import { toast } from "react-toastify";
 import Image from "next/image";
 import style from "./ProductDetail.module.css";
