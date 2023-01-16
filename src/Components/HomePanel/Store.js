@@ -37,20 +37,24 @@ const Store = (props) => {
 
             <div className={`container-fluid  ${style.container_store_product}`}>
                 <div className="row" style={{ textAlign: "center", justifyContent: "center" }}>
-                    <Image
-                        width={30}
-                        height={30}
-                        src="/assets/banner/b1.jpg"
-                        className="col-12 col-md-6 mb-2 mb-md-0 ad-image-landing"
-                        alt="samsung-galaxy"
-                    />
-                    <Image
-                        width={30}
-                        height={30}
-                        src="/assets/banner/b2.jpg"
-                        className="col-12 col-md-6 ad-image-landing"
-                        alt="samsung-galaxy"
-                    />
+                    <span className={`${style.ad_image_landing}`}>
+                        <Image
+
+                            width={760}
+                            height={290}
+                            src="/assets/banner/b1.jpg"
+                            alt="samsung-galaxy"
+                        />
+                    </span>
+                    <span className={`${style.ad_image_landing}`}>
+                        <Image
+
+                            width={760}
+                            height={290}
+                            src="/assets/banner/b2.jpg"
+                            alt="samsung-galaxy"
+                        />
+                    </span>
                 </div>
                 <div
                     className="my-3 py-2"

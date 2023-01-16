@@ -18,6 +18,7 @@ import { Modal } from 'react-bootstrap';
 import { toast } from "react-toastify";
 import Link from "next/link";
 import Image from "next/image";
+import style from "./Product.module.css";
 // import { Rating } from "@mui/material";
 
 const Product = ({ productData }) => {
@@ -35,10 +36,10 @@ const Product = ({ productData }) => {
   }, [])
 
   return (
-    <div className="product-cart my-3 pt-4 pb-1">
-      <Link href={`/products/${productData.id}`} className="link-product">
+    <div className={` my-3 pt-4 pb-1 ${style.product_cart}`}>
+      <Link href={`/products/${productData.id}`} className={style.link_product}>
         <>
-          <Image src={productData.image} alt="product" className="p-3 mb-4" layout="fill" />
+          <Image src={productData.image} alt="product" className="p-3 mb-3" width={170} height={167} />
           {/* <Rating name="read-only" value='2' readOnly /> */}
 
           <p style={{ fontSize: "smaller", height: "2.5rem" }}>
@@ -46,7 +47,7 @@ const Product = ({ productData }) => {
           </p>
         </>
       </Link>
-      <div className="product-old-price">
+      <div className={style.product_old_price}>
         {
           productData.old_price &&
           <del>
@@ -54,12 +55,12 @@ const Product = ({ productData }) => {
           </del>
         }
       </div>
-      <div className="product-btns">
-        <span className="product-new-price">
+      <div className={style.product_btns}>
+        <span className={style.product_new_price}>
           ${" "} {productData.new_price}
           {
             productData.old_price &&
-            <span className="product-show-discount">
+            <span className={style.product_show_discount}>
               (%
               {(Math.round((productData.new_price - productData.old_price) / productData.old_price * 100))}
               )
@@ -67,8 +68,8 @@ const Product = ({ productData }) => {
 
           }
         </span>
-        <div id="productBtns">
-          <span className="product-buy-btn">
+        <div id={style.productBtns}>
+          <span className={style.product_buy_btn}>
             {/* {quantityCount(state, productData.id) > 1 && (
               <button
                 onClick={() => dispatch({ type: "DECREASE", payload: productData })}
@@ -95,7 +96,7 @@ const Product = ({ productData }) => {
             )} */}
             <button
               onClick={() => dispatch({ type: "ADD_ITEM", payload: productData })}
-              className="btn-cart-product-add"
+              className={style.btn_cart_product_add}
             >
               <i className="fa fa-cart-arrow-down"
                 onClick={
@@ -109,13 +110,13 @@ const Product = ({ productData }) => {
                 }></i>
             </button>
           </span>
-          <span className="product-share-btn" >
+          <span className={style.product_share_btn}>
             <i className="fa fa-share-alt" onClick={handleShow}></i>
             <Modal show={show} onHide={handleClose}>
               <Modal.Header>
                 <Modal.Title>Share via:</Modal.Title>
               </Modal.Header>
-              <Modal.Body className="modal-body-share">
+              <Modal.Body className={style.modal_body_share}>
                 {/* whatsapp  */}
                 <WhatsappShareButton
                   url={`${shareLink}/${productData.id}`}
@@ -156,7 +157,7 @@ const Product = ({ productData }) => {
             </Modal>
           </span>
 
-          <span className="product-heart-btn" onClick={() => { setHeart(!heart) }}>
+          <span className={style.product_heart_btn} onClick={() => { setHeart(!heart) }}>
             <i className="fa fa-heart-o" style={{ color: heart && "red" }}></i>
           </span>
         </div>

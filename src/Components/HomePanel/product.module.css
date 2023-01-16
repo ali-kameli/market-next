@@ -1,9 +1,9 @@
-.link-product {
+.link_product {
   text-decoration: none;
   color: black;
 }
 
-.link-product:hover {
+.link_product:hover {
   text-decoration: none;
   color: black;
 }
@@ -27,7 +27,7 @@
   margin-inline: 4px;
 }
 
-.product-cart {
+.product_cart {
   background-color: rgb(255, 255, 255);
   border-radius: 10px;
   min-width: 180px;
@@ -36,12 +36,12 @@
   box-shadow: rgb(0 0 0 / 20%) 6px 13px 20px 0px;
 }
 
-.product-cart:hover {
+.product_cart:hover {
   /* transform: translateY(-5px); */
   box-shadow: rgb(0 0 0 / 30%) 9px 15px 24px 0px;
 }
 
-.product-cart img {
+.product_cart img {
   max-width: 100%;
   min-height: 100%;
   max-height: 100%;
@@ -49,29 +49,29 @@
 
 }
 
-.link-product>img {
+.link_product>img {
   transition: all 0.2s;
   width: 150px !important;
   height: 150px !important;
 }
 
 @media (max-width:426px) {
-  .link-product>img {
+  .link_product>img {
     width: 130px !important;
     height: 130px !important;
   }
 
-  .link-product {
+  .link_product {
     padding: 0 !important;
   }
 
 }
 
-.link-product>img:hover {
+.link_product>img:hover {
   transform: scale(1.2);
 }
 
-.btn-cart-product {
+.btn_cart_product {
   background-color: #fe0048;
   border: none;
   color: #fff;
@@ -85,7 +85,7 @@
     rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
-.btn-cart-product-add {
+.btn_cart_product_add {
   background-color: transparent;
   border: none;
   /* color: #fff; */
@@ -100,20 +100,16 @@
   /* width: 100%; */
 }
 
-.counter-product { 
+.counter_product { 
   margin: 5px 0;
 }
 
-a {
-  text-decoration: none;
-}
-
-.detail-product {
+.detail_product {
   background-color: lightgrey;
   width: 100%;
 }
 
-.product-btns {
+.product_btns {
   text-align: left;
   padding-inline: 11px;
   display: flex;
@@ -121,11 +117,11 @@ a {
   margin-bottom: 10px;
 }
 
-button:focus {
+/* button:focus {
   border: none;
-}
+} */
 
-.product-old-price {
+.product_old_price{
   padding: 0 11px;
   text-align: left;
   font-size: 15px;
@@ -134,12 +130,12 @@ button:focus {
   height: 20px;
 }
 
-.product-new-price {
+.product_new_price {
   font-size: 18px;
   font-family: sans-serif;
 }
 
-.product-show-discount {
+.product_show_discount {
   margin-left: 5px;
   font-size: 14px;
   color: rgb(3, 148, 3);
