@@ -26,17 +26,17 @@ const Landing = () => {
               </ol>
               <div className="carousel-inner">
                 <div className={`carousel-item ${style.carousel_item} active`}>
-                  <Image width={200} height={100}
+                  <Image layout="fill"
                     src='/assets/banner/samsung-banner.webp'
                     alt="banner"
                     className="d-block w-100"
                   />
                 </div>
                 <div className={`carousel-item ${style.carousel_item}`}>
-                  <Image width={200} height={100} src='/assets/banner/home.jpg' alt="img3" className="d-block w-100" />
+                  <Image layout="fill" src='/assets/banner/home.jpg' alt="img3" className="d-block w-100" />
                 </div>
                 <div className={`carousel-item ${style.carousel_item} `}>
-                  <Image width={200} height={100} src='/assets/banner/b2.jpg' alt="img2" className="d-block w-100" />
+                  <Image layout="fill" src='/assets/banner/b2.jpg' alt="img2" className="d-block w-100" />
                 </div>
                 <a
                   class="carousel-control-prev"

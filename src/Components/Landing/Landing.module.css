@@ -35,8 +35,9 @@
   margin-bottom: 10px;
 }
 
-.carousel_item img {
-  height: 32rem;
+.carousel_item {
+  height: 28rem;
+  width: 100%;
 }
 
 .cerve_landing {
@@ -54,8 +55,8 @@
 }
 
 @media (max-width:690px) {
-  .carousel_item img {
-    height: 12rem !important;
+  .carousel_item {
+    height: 10rem !important;
   }
 
   .lnading_single_img img {
@@ -66,14 +67,14 @@
 }
 
 @media (max-width:550px) {
-  .carousel_item img {
+  .carousel_item {
     height: 15rem !important;
   }
 }
 
 @media (max-width:470px) {
-  .carousel_item img {
-    height: 9rem !important;
+  .carousel_item {
+    height: 8rem !important;
   }
 }
 
@@ -82,7 +83,7 @@
     height: 11rem;
   }
 
-  .carousel_item img {
+  .carousel_item {
     height: 24rem;
   }
 }
