@@ -1,0 +1,8 @@
+.detail_ul {
+padding: 0;
+line-height: 1.8;
+}
+
+.detail_ul>li>span {
+    font-weight: bold;
+}

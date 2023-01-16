@@ -11,7 +11,7 @@ const OffProduct = ({ productData }) => {
 
   return (
     <div className={` ${style.product_cart} mx-1 my-3 pt-4 pb-1`}>
-      <Link href={`/products/${productData.id}`} className={style.link_product} passHref>
+      <Link href={`/${productData.id}`} className={style.link_product} passHref>
         <div className={style.off_product}>
           <Image width={150} height={150} src={productData.image} alt="product" className="p-3 mb-3" />
           <p style={{ fontSize: "smaller", height: "5rem" }}>

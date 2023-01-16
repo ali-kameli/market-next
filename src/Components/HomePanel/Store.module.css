@@ -17,10 +17,14 @@
     border-radius: 1rem;
 }
 
-#stor-sort-list {
+#stor_sort_list {
     display: flex;
+    align-items: center;
+    flex-wrap: wrap;
 }
-
+#stor_sort_list>span{
+    margin-bottom: 5px;
+}
 #dropdown-basic,
 #dropdown {
     background: none;

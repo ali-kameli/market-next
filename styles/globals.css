@@ -1,20 +1,27 @@
 .offcanvas.offcanvas-end {
   left: 0 !important;
-} 
+}
+
+li {
+  list-style: none;
+}
+
 @font-face {
   font-family: "sahel";
   src: url("~/public/fonts/Sahel.eot");
 }
+
 @font-face {
   font-family: "Nexa-Bold";
   src: url("~/public/fonts/nexa-bold.otf");
 }
+
 @font-face {
   font-family: "Nexa-Light";
   src: url("~/public/fonts/nexa-light.otf");
-} 
+}
 
 /* global sidebar style   */
-.navbar-expand-lg .offcanvas{
-  width:80% !important
+.navbar-expand-lg .offcanvas {
+  width: 80% !important
 }

@@ -1,13 +1,21 @@
 import React, { useContext, useEffect, useState } from "react";
-import { isInCart, quantityCount } from "../helpers/functions";
-// import { CartContext } from "./../context/CartContextProvider";
-// import shop from "../assets/addtocart.png";
+import { Link } from "react-router-dom";
+import { isInCart, quantityCount } from "./../helpers/functions";
+import { CartContext } from "./../context/CartContextProvider";
+import "./product.css";
+import shop from "../assets/addtocart.png";
 import {
   EmailIcon,
+  FacebookMessengerIcon,
+  FacebookIcon,
   LinkedinIcon,
   TelegramIcon,
   TwitterIcon,
+  InstagramIcon,
   WhatsappIcon,
+} from "react-share";
+import {
+  FacebookShareButton,
   WhatsappShareButton,
   TelegramShareButton,
   EmailShareButton,
@@ -16,9 +24,6 @@ import {
 } from "react-share";
 import { Modal } from 'react-bootstrap';
 import { toast } from "react-toastify";
-import Link from "next/link";
-import Image from "next/image";
-import style from "./Product.module.css";
 // import { Rating } from "@mui/material";
 
 const Product = ({ productData }) => {
@@ -29,25 +34,23 @@ const Product = ({ productData }) => {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  // const { state, dispatch } = useContext(CartContext);
+  const { state, dispatch } = useContext(CartContext);
 
   useEffect(() => {
     setShareLink(window.location.href);
   }, [])
 
   return (
-    <div className={` my-3 pt-4 pb-1 ${style.product_cart}`}>
-      <Link href={`/${productData.id}`} className={style.link_product}>
-        <>
-          <Image src={productData.image} alt="product" className="p-3 mb-3" width={170} height={167} />
-          {/* <Rating name="read-only" value='2' readOnly /> */}
+    <div className="product-cart my-3 pt-4 pb-1">
+      <Link to={`/products/${productData.id}`} className="link-product">
+        <img src={productData.image} alt="product" className="p-3 mb-4" />
+        {/* <Rating name="read-only" value='2' readOnly /> */}
 
-          <p style={{ fontSize: "smaller", height: "2.5rem" }}>
-            {productData.title}
-          </p>
-        </>
+        <p style={{ fontSize: "smaller", height: "2.5rem" }}>
+          {productData.title}
+        </p>
       </Link>
-      <div className={style.product_old_price}>
+      <div className="product-old-price">
         {
           productData.old_price &&
           <del>
@@ -55,12 +58,12 @@ const Product = ({ productData }) => {
           </del>
         }
       </div>
-      <div className={style.product_btns}>
-        <span className={style.product_new_price}>
+      <div className="product-btns">
+        <span className="product-new-price">
           ${" "} {productData.new_price}
           {
             productData.old_price &&
-            <span className={style.product_show_discount}>
+            <span className="product-show-discount">
               (%
               {(Math.round((productData.new_price - productData.old_price) / productData.old_price * 100))}
               )
@@ -68,8 +71,8 @@ const Product = ({ productData }) => {
 
           }
         </span>
-        <div id={style.productBtns}>
-          <span className={style.product_buy_btn}>
+        <div id="productBtns">
+          <span className="product-buy-btn">
             {/* {quantityCount(state, productData.id) > 1 && (
               <button
                 onClick={() => dispatch({ type: "DECREASE", payload: productData })}
@@ -96,7 +99,7 @@ const Product = ({ productData }) => {
             )} */}
             <button
               onClick={() => dispatch({ type: "ADD_ITEM", payload: productData })}
-              className={style.btn_cart_product_add}
+              className="btn-cart-product-add"
             >
               <i className="fa fa-cart-arrow-down"
                 onClick={
@@ -110,13 +113,13 @@ const Product = ({ productData }) => {
                 }></i>
             </button>
           </span>
-          <span className={style.product_share_btn}>
+          <span className="product-share-btn" >
             <i className="fa fa-share-alt" onClick={handleShow}></i>
             <Modal show={show} onHide={handleClose}>
               <Modal.Header>
                 <Modal.Title>Share via:</Modal.Title>
               </Modal.Header>
-              <Modal.Body className={style.modal_body_share}>
+              <Modal.Body className="modal-body-share">
                 {/* whatsapp  */}
                 <WhatsappShareButton
                   url={`${shareLink}/${productData.id}`}
@@ -132,6 +135,13 @@ const Product = ({ productData }) => {
                 >
                   <LinkedinIcon size={32} round />
                 </LinkedinShareButton>
+                {/* FaceBook  */}
+                <FacebookShareButton
+                  url={`${shareLink}/${productData.id}`}
+                  hashtags={["hashtag1", "hashtag2"]}
+                >
+                  <FacebookIcon size={32} round />
+                </FacebookShareButton>
                 {/* Telegram  */}
                 <TelegramShareButton
                   url={`${shareLink}/${productData.id}`}
@@ -157,7 +167,7 @@ const Product = ({ productData }) => {
             </Modal>
           </span>
 
-          <span className={style.product_heart_btn} onClick={() => { setHeart(!heart) }}>
+          <span className="product-heart-btn" onClick={() => { setHeart(!heart) }}>
             <i className="fa fa-heart-o" style={{ color: heart && "red" }}></i>
           </span>
         </div>

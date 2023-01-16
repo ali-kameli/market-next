@@ -58,7 +58,7 @@ const Store = (props) => {
                 </div>
                 <div
                     className="my-3 py-2"
-                    id='stor-sort-list'
+                    id={style.stor_sort_list}
                     style={{
                         borderBottom: "3px solid #fc0046",
                         width: "100%",
