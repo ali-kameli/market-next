@@ -11,7 +11,6 @@ import style from "./ProductDetail.module.css";
 
 const ProductDetails = ({ detail }) => {
   // const { state, dispatch } = useContext(CartContext);
-
   // const [detail, setDetails] = useState([]);
 
   // const id = props.match.params.id;
