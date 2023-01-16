@@ -6,8 +6,8 @@ import Data from "../../Api/Data";
 // import { isInCart, quantityCount } from "./helpers/functions";
 import ProductDetailCard from "./productDetailCard";
 import { toast } from "react-toastify";
-import style from "./ProductDetails.module.css";
 import Image from "next/image";
+import style from "./ProductDetails.module.css";
 
 const ProductDetails = ({ detail }) => {
   // const { state, dispatch } = useContext(CartContext);
@@ -34,7 +34,7 @@ const ProductDetails = ({ detail }) => {
     <div className={`container p-3 mt-4 ${style.container_product_details}`}>
       <div className="row ">
         <div className={`col-12 col-md-4 mt-4 ${style.parrent_product_details}`}>
-          <Image layout="fill" src={detail.image} alt="product" />
+          <Image width={295} height={311} src={detail.image} alt="product" />
         </div>
         <div className={`col-12 col-md-6 mt-3 ${style.text_product_details}`}>
           <span className={style.detail_top_info}>
