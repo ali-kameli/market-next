@@ -42,6 +42,7 @@
     display: inline-grid;
     text-align: left;
     line-height: 1.9;
+    text-decoration: none;
 }
 
 .service_footer a:hover {
@@ -51,13 +52,14 @@
 .section_footer {
     display: flex;
     place-items: center !important;
-    text-align: right !important;
+    text-align: left !important;
     border-radius: 10px;
     box-shadow: rgb(50 50 93 / 25%) 4px 4px 10px -4px;
-    justify-content: flex-end !important;
+    justify-content: flex-start !important;
     transition: all 0.2s;
     margin-bottom: 2rem !important;
     padding-inline: 1.3rem;
+    border-left: 12px solid #fe0048;
 }
 
 .section_footer:hover {
