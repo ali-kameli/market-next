@@ -2,9 +2,9 @@
   background-color: #a60025 !important;
 }
 
-.text-off {
-  font-size: xx-large;
-  font-family: "sahel";
+.text_off {
+  font-size: x-large;
+  font-family: "Nexa-Bold";
   color: white;
 }
 
@@ -41,4 +41,13 @@
 /* Handle on hover */
 .off_resp::-webkit-scrollbar-thumb:hover {
   background: #b50034;
+}
+
+
+@media (max-width:768px) {
+  .off_side {
+    display: flex;
+    flex-direction: column;
+    width: 240px;
+  }
 }

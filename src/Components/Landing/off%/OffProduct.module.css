@@ -1,20 +1,24 @@
-.link_product>img {
+.link_product {
     width: 170px !important;
     height: 167px !important;
 }
 
 .product_cart {
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    width: 180px;
     min-width: 180px;
-    max-width: 200px;
+    /* max-width: 200px; */
+    transition: all 0.2s;
+    box-shadow: rgb(0 0 0 / 20%) 6px 13px 20px 0px;
 }
 
-.off_product>img {
-    width: 150px !important;
-    height: 150px !important;
+.product_cart:hover {
+    box-shadow: rgb(0 0 0 / 30%) 9px 15px 24px 0px;
 }
 
 @media (max-width:426px) {
-    .off_product>img {
+    .off_product {
         width: 130px !important;
         height: 130px !important;
     }

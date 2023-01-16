@@ -7,10 +7,10 @@ import Image from "next/image";
 const Off = () => {
   return (
     <div className={` container-fluid  pb-5 mt-5  ${style.off_landing}`}>
-      <div className="row m-0" style={{ textAlign: "center" }}>
+      <div className="row m-0" style={{ textAlign: "center", justifyContent: "center" }}>
         <div className={`col-12 col-md-2 ${style.off_side}`}>
-          <Image src='/assets/off/boxgift.png' alt="gift" className={style.img_off} width={120} height={120} />
-          <span className="text-off">OFF% MARKET</span>
+          <Image src='/assets/off/boxgift.png' alt="gift" className={style.img_off} width={256} height={256} />
+          <span className={style.text_off}>OFF% MARKET</span>
         </div>
         <div className={`col-md-10  ${style.off_resp}`} style={{ display: "flex " }}>
           {Data.getProducts().map((product) => (
