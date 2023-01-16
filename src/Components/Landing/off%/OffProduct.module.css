@@ -18,10 +18,10 @@
 }
 
 @media (max-width:426px) {
-    .off_product {
+    /* .off_product {
         width: 130px !important;
         height: 130px !important;
-    }
+    } */
 
     .product_cart {
         padding: 0 !important;
