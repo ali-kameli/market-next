@@ -1,4 +1,4 @@
-import style from "./ProductDetailCard.module.css";
+import style from "./ProductDetailCard.module.css"; 
 
 const ProductDetailCard = (props) => {
     const detail = props;
