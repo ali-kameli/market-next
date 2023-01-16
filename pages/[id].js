@@ -1,9 +1,15 @@
+import Head from "next/head";
 import { Data } from "../src/Api/Data";
 import ProductDetails from "../src/Components/HomePanel/ProductDetails";
 
 const DetailPage = ({ detail }) => {
     return (
-        <ProductDetails detail={detail} />
+        <>
+            <Head>
+                <title>Product Detail</title>
+            </Head>
+            <ProductDetails detail={detail} />
+        </>
     );
 }
 export default DetailPage;
