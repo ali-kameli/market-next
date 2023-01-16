@@ -6,8 +6,8 @@ const Footer = () => {
     return (
         <div>
             <div className="container my-5">
-                <div className="row" style={{ justifyContent: "space-between" }}>
-                    <div className={`col-12 col-md-6 col-lg-3 ${style.section_footer}`}>
+                <div className="row" style={{ justifyContent: "space-between",placeContent:"center" }}>
+                    <div className={`col-10 col-md-6 col-lg-3 ${style.section_footer}`}>
                         <span>
                             <h3>Email Address</h3>
                             <a className={style.link} href="mailto:alikameli0123@gmail.com">
@@ -16,7 +16,7 @@ const Footer = () => {
                         </span>
                         <i className={`fa fa-envelope ${style.fa_footer}`}></i>
                     </div>
-                    <div className={`col-12 col-md-6 col-lg-3 ${style.section_footer}`}>
+                    <div className={`col-10 col-md-6 col-lg-3 ${style.section_footer}`}>
                         <span>
                             <h3>Message</h3>
                             <div style={{ display: "grid" }}>
@@ -32,14 +32,14 @@ const Footer = () => {
                         </span>
                         <i className={`fa fa-comment ${style.fa_footer}`}></i>
                     </div>
-                    <div className={`col-12 col-md-6 col-lg-3 ${style.section_footer}`}>
+                    <div className={`col-10 col-md-6 col-lg-3 ${style.section_footer}`}>
                         <span>
                             <h3>Phone</h3>
                             <a className={style.link} href="tel:+989385109370">0938 510 9370</a>
                         </span>
                         <i className={`fa fa-phone ${style.fa_footer}`}></i>
                     </div>
-                    <div className={`col-12 col-md-6 col-lg-3 ${style.section_footer}`}>
+                    <div className={`col-10 col-md-6 col-lg-3 ${style.section_footer}`}>
                         <span>
                             <h3>Address</h3>
                             <p>Iran, mazandaran, sari</p>
