@@ -47,7 +47,7 @@ const cartReducer = (state, action) => {
         ...state,
         selectedItems: [...newSelectedItems],
         ...sumItems(newSelectedItems),
-      };
+      }; 
     case "INCREASE":
       const IndexI = state.selectedItems.findIndex(
         (item) => item.id === action.payload.id

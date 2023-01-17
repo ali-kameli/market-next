@@ -2,13 +2,13 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useContext, useEffect } from "react";
 import Ticker from "react-ticker";
-// import { CartContext } from "./../context/CartContextProvider";
+import { CartContext } from "./context/CartContextProvider";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBasketShopping, faUser } from '@fortawesome/free-solid-svg-icons'
 import style from "./Navbar.module.css";
 
 const NavbarSection = ({ search, searchHandler }) => {
-    // const { state } = useContext(CartContext);
+    const { state } = useContext(CartContext);
     // const { search, searchHandler } = useContext(SearchContext);
 
     return (
@@ -49,14 +49,12 @@ const NavbarSection = ({ search, searchHandler }) => {
                             </Link>
                         </div>
                     </ul>
-                    <span className={style.cart_navbar}>
-                        <Link href="/cart">
-                            <>
-                                <FontAwesomeIcon icon={faBasketShopping} className={style.shopping_cart_navbar} />
-                                {/* <p className={style.counter}>{state.itemsCounter}</p> */}
-                            </>
-                        </Link>
-                    </span>
+                    <Link href="/cart">
+                        <span className={style.cart_navbar}>
+                            <FontAwesomeIcon icon={faBasketShopping} className={style.shopping_cart_navbar} />
+                            <p className={style.counter}>{state.itemsCounter}</p>
+                        </span>
+                    </Link>
                 </form>
             </nav>
 

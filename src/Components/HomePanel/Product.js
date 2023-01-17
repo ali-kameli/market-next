@@ -19,7 +19,9 @@ import { toast } from "react-toastify";
 import Link from "next/link";
 import Image from "next/image";
 import style from "./Productcss.module.css";
-// import { Rating } from "@mui/material";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCartArrowDown, faHeart, faShareNodes } from "@fortawesome/free-solid-svg-icons";
+import { Rating } from "@mui/material"; 
 
 
 const Product = ({ productData }) => {
@@ -30,7 +32,7 @@ const Product = ({ productData }) => {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  // const { state, dispatch } = useContext(CartContext);
+  const { state, dispatch } = useContext(CartContext);
 
   useEffect(() => {
     setShareLink(window.location.href);
@@ -38,15 +40,14 @@ const Product = ({ productData }) => {
 
   return (
     <div className={` my-3 pt-4 pb-1 ${style.product_cart}`}>
-      <Link href={`/${productData.id}`} className={style.link_product}>
-        <>
+      <Link href={`/${productData.id}`} className={style.link_product} passHref>
+        <span>
           <Image src={productData.image} alt="product" className="p-3 mb-3" width={170} height={167} />
-          {/* <Rating name="read-only" value='2' readOnly /> */}
-
+          <Rating name="read-only" value={productData.rate} readOnly />
           <p style={{ fontSize: "smaller", height: "2.5rem" }}>
             {productData.title}
           </p>
-        </>
+        </span>
       </Link>
       <div className={style.product_old_price}>
         {
@@ -71,26 +72,8 @@ const Product = ({ productData }) => {
         </span>
         <div id={style.productBtns}>
           <span className={style.product_buy_btn}>
-            {/* {quantityCount(state, productData.id) > 1 && (
-              <button
-                onClick={() => dispatch({ type: "DECREASE", payload: productData })}
-                className="btn-cart-product"
-              >
-                -
-              </button>
-            )}
 
-            {quantityCount(state, productData.id) === 1 && (
-              <button
-                onClick={() =>
-                  dispatch({ type: "REMOVE_ITEM", payload: productData })
-                }
-                className="btn-cart-product"
-              >
-                <i className="fa fa-trash-o"></i>
-              </button>
-            )}
-            {quantityCount(state, productData.id) > 0 && (
+            {/* {quantityCount(state, productData.id) > 0 && (
               <span className="counter-product">
                 {quantityCount(state, productData.id)}
               </span>
@@ -99,21 +82,22 @@ const Product = ({ productData }) => {
               onClick={() => dispatch({ type: "ADD_ITEM", payload: productData })}
               className={style.btn_cart_product_add}
             >
-              <i className="fa fa-cart-arrow-down"
-                onClick={
-                  () => {
-                    toast.success(`😄 The product has been added to the shopping cart`, {
-                      position: "top-right",
-                      closeOnClick: true,
-                      theme: "colored",
-                    })
-                  }
-                }
-              ></i>
+              <span onClick={() => {
+                !quantityCount(state, productData.id) &&
+                  toast.success(`😄 ${productData.title} has been added to the shopping cart`, {
+                    position: "top-right",
+                    closeOnClick: true,
+                    theme: "colored",
+                  })
+              }}>
+                <FontAwesomeIcon icon={faCartArrowDown} style={{ color: quantityCount(state, productData.id) > 0 && "green" }} />
+              </span>
             </button>
           </span>
           <span className={style.product_share_btn}>
-            <i className="fa fa-share-alt" onClick={handleShow}></i>
+            <span onClick={handleShow}>
+              <FontAwesomeIcon icon={faShareNodes} />
+            </span>
             <Modal show={show} onHide={handleClose}>
               <Modal.Header>
                 <Modal.Title>Share via:</Modal.Title>
@@ -160,7 +144,7 @@ const Product = ({ productData }) => {
           </span>
 
           <span className={style.product_heart_btn} onClick={() => { setHeart(!heart) }}>
-            <i className="fa fa-heart-o" style={{ color: heart && "red" }}></i>
+            <FontAwesomeIcon icon={faHeart} style={{ color: heart ? "red" : "gray" }} />
           </span>
         </div>
       </div>

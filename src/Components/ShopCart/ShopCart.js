@@ -1,74 +1,72 @@
+import Link from "next/link";
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
 import { CartContext } from "./../context/CartContextProvider";
 import Cart from "./Cart";
-import "./ShopCart.css";
+import style from "./ShopCart.module.css";
 
 const ShopCart = () => {
   const { state, dispatch } = useContext(CartContext);
-console.log(state);
+
   return (
-    <div className="container-fluid container-shopcart pt-5 ">
-      <div className="row">
-        <div className="col-12 col-md-7 cartContainer m-0 p-0">
+    <div className={`container-fluid pt-5 ${style.container_shopcart}`}>
+      <div className={`row ${style.row}`}>
+        <div className={`col-12 col-md-7  m-0 p-0 ${style.cartContainer}`}>
           {state.selectedItems.map((item) => (
             <Cart key={item.id} data={item} />
           ))}
         </div>
         <div className="col-12 col-md-3 p-0 m-0">
           {state.itemsCounter > 0 && (
-            <div className="payments">
-              <p className="much-counter-cart">
-                <span className="much-counter-cart">تعداد محصولات : </span>
+            <div className={style.payments}>
+              <p className={style.much_counter_cart}>
+                <span className={style.much_counter_cart}>Number of products : </span>
                 {state.itemsCounter}
               </p>
-              <p className="much-counter-cart">
-                <span className="much-counter-cart">قیمت کالا ها : </span>
+              <p className={style.much_counter_cart}>
+                <span className={style.much_counter_cart}>Price of products : </span>
                 <span>
-                  {state.total.length > 3 ? state.total.toLocaleString() : state.total} <small>تومان</small>
+                  {state.total.length > 3 ? state.total.toLocaleString() : state.total} <small>$</small>
                 </span>
               </p>
-              <p className="much-counter-cart">
-                <span className="much-counter-cart">تخفیف کالا ها : </span>
-                <span className="off-counter-cart">
-                  (%50) {state.total.length > 3 ? state.total.toLocaleString() : state.total} <small>تومان</small>
+              <p className={style.much_counter_cart}>
+                <span className={style.much_counter_cart}>Discount of products: </span>
+                <span className={style.off_counter_cart}>
+                  (%50) {state.total.length > 3 ? state.total.toLocaleString() : state.total} <small>$</small>
                 </span>
               </p>
               <hr />
-              <p className="basket-counter-cart">
-                <span className="basket-counter-cart">جمع سبد خرید : </span>
+              <p className={style.basket_counter_cart}>
+                <span className={style.basket_counter_cart}>Total: </span>
                 <span>
-                  {state.total.length > 3 ? state.total.toLocaleString() : state.total} <small>تومان</small>
+                  {state.total.length > 3 ? state.total.toLocaleString() : state.total} <small>$</small>
                 </span>
               </p>
-              <div className="buttonContainer">
+              <div className={style.buttonContainer}>
                 <button
-                  className="checkout"
+                  className={style.checkout}
                   onClick={() => dispatch({ type: "CHECKOUT" })}
                 >
-                  تسویه حساب
-                </button>
+                  Buy                </button>
                 <button
-                  className="clear"
+                  className={style.clear}
                   onClick={() => dispatch({ type: "CLEAR" })}
                 >
-                  حذف همه
-                </button>
+                  Remove all                </button>
               </div>
             </div>
           )}
         </div>
         <div className="col-12">
           {!state.checkout && state.itemsCounter === 0 && (
-            <div className="complete col-12 text-center">
-              <h3>میخواهید خرید کنید ؟</h3>
-              <Link to="/products">بازگشت به فروشگاه</Link>
+            <div className={`col-12 text-center ${style.complete}`}>
+              <h3>Do You want buy more?</h3>
+              <Link href="/" passHref>Return to the store</Link>
             </div>
           )}
           {state.checkout && (
-            <div className="complete col-12 text-center">
-              <h3>فرآیند خرید موفقیت آمیز بود </h3>
-              <Link to="/products">خرید بیشتر</Link>
+            <div className={`col-12 text-center ${style.complete}`}>
+              <h3>buy successful</h3>
+              <Link href="/" passHref>buy more</Link>
             </div>
           )}
         </div>

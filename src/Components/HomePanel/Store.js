@@ -10,7 +10,7 @@ import style from "./Store.module.css";
 
 
 const Store = (props) => {
-      const products = useContext(ProductContext);
+    const products = useContext(ProductContext);
     // const search = useContext(SearchContext);
 
     const [search, setSearch] = useState("");

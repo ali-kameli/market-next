@@ -1,33 +1,18 @@
 import React, { useContext, useEffect, useState } from "react";
-// import { CartContext } from "./context/CartContextProvider";
-// import "./productDetails.css";
-// import shop from "./assets/addtocart.png";
+import { CartContext } from "../context/CartContextProvider"; 
 import Data from "../../Api/Data";
-// import { isInCart, quantityCount } from "./helpers/functions";
+import { isInCart, quantityCount } from "../helpers/functions";
 import ProductDetailCard from "./ProductDetailCard";
 import { toast } from "react-toastify";
 import Image from "next/image";
 import style from "./ProductDetail.module.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCartArrowDown, faTrashAlt } from "@fortawesome/free-solid-svg-icons";
+import { Rating } from "@mui/material";
 
 const ProductDetails = ({ detail }) => {
-  // const { state, dispatch } = useContext(CartContext);
-  // const [detail, setDetails] = useState([]);
-
-  // const id = props.match.params.id;
-
-  // const data = () => {
-  //   const response = Data.getProducts();
-  //   return response[id - 1];
-  // };
-
-  // useEffect(() => {
-  //   const fetchAPI = () => {
-  //     setDetails(data());
-  //   };
-
-  //   fetchAPI();
-  // }, []);
-
+  const { state, dispatch } = useContext(CartContext);
+  // const [detail, setDetails] = useState([]); 
 
   return (
     <div className={`container p-3 mt-4 ${style.container_product_details}`}>
@@ -37,7 +22,10 @@ const ProductDetails = ({ detail }) => {
         </div>
         <div className={`col-12 col-md-6 mt-3 ${style.text_product_details}`}>
           <span className={style.detail_top_info}>
-            <h4><b>{detail.title}</b></h4>
+            <h4>
+              <b>{detail.title}</b>
+              <Rating name="read-only" value={detail.rate} readOnly />
+            </h4>
             <h6 className={style.all_category_detail}>
               <span className={style.text_category_details}>Category :</span>
               <span className={style.category_product_details}>
@@ -65,47 +53,48 @@ const ProductDetails = ({ detail }) => {
               }
             </h4>
             <div className={style.btn_product_detail}>
-              {/* {quantityCount(state, details.id) > 1 && (
+              {quantityCount(state, detail.id) > 1 && (
                 <button
-                  onClick={() => dispatch({ type: "DECREASE", payload: details })}
-                  className="btn-cart-product"
+                  onClick={() => dispatch({ type: "DECREASE", payload: detail })}
+                  className={style.btn_cart_product}
                 >
                   -
                 </button>
               )}
 
-              {quantityCount(state, details.id) === 1 && (
+              {quantityCount(state, detail.id) === 1 && (
                 <button
                   onClick={() =>
-                    dispatch({ type: "REMOVE_ITEM", payload: details })
+                    dispatch({ type: "REMOVE_ITEM", payload: detail })
                   }
-                  className="btn-cart-product"
+                  className={style.btn_cart_product}
                 >
-                  <i className="fa fa-trash-o"></i>
+                  <FontAwesomeIcon icon={faTrashAlt} />
                 </button>
               )}
-              {quantityCount(state, details.id) > 0 && (
-                <span className="counter-product">
-                  {quantityCount(state, details.id)}
+              {quantityCount(state, detail.id) > 0 && (
+                <span className={style.counter_product}>
+                  {quantityCount(state, detail.id)}
                 </span>
               )}
 
-              {isInCart(state, details.id) ? (
+              {isInCart(state, detail.id) ? (
                 <button
-                  onClick={() => dispatch({ type: "INCREASE", payload: details })}
-                  className="btn-cart-product"
+                  onClick={() => dispatch({ type: "INCREASE", payload: detail })}
+                  className={style.btn_cart_product}
                 >
                   +
                 </button>
               ) : (
                 <button
-                  onClick={() => dispatch({ type: "ADD_ITEM", payload: details })}
-                  className=" btn-detail-product-add"
+                  onClick={() => dispatch({ type: "ADD_ITEM", payload: detail })}
+                  className={style.btn_detail_product_add}
                 >
-                  <Image layout="fill" src={shop} alt="ax" />
+                  <FontAwesomeIcon icon={faCartArrowDown} />
+
                   <span> Add to Cart</span>
                 </button>
-              )} */}
+              )}
             </div>
           </div>
         </div>

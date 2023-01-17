@@ -38,10 +38,10 @@
      color: #fff;
      padding-inline: 4px;
      border-radius: 10px;
-     height: 1rem;
+     /* height: 1rem; */
      display: inline-block;
      position: relative;
-     padding-bottom: 19px;
+     /* padding-bottom: 19px; */
  }
 
  .fa_user_navbar {

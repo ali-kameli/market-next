@@ -1,28 +1,29 @@
 import React, { useContext } from "react";
 import { shorten } from "./../helpers/functions";
 import { CartContext } from "./../context/CartContextProvider";
-import "./Cart.css";
+import style from "./Cart.module.css";
 import Image from "next/image";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTrashAlt } from "@fortawesome/free-solid-svg-icons";
 
 const Cart = (props) => {
   const { dispatch } = useContext(CartContext);
 
   const { image, title, new_price, quantity } = props.data;
 
-
   return (
-    <div className=" cart-basket-container ">
-      <Image width={50} height={50} src={image} alt="product" className="productImage " />
-      <div className="data">
+    <div className={style.cart_basket_container}>
+      <Image width={120} height={115} src={image} alt="product" className={style.productImage} />
+      <div className={style.data}>
         {/* <h6>{shorten(title)}</h6> */}
         <h6>{title}</h6>
-        <div className="buttonContainer-cart">
+        <div className={style.buttonContainer_cart}>
           <button
             onClick={() => dispatch({ type: "INCREASE", payload: props.data })}
           >
             +
           </button>
-          <span className="quantity">{quantity}</span>
+          <span className={style.quantity}>{quantity}</span>
           {quantity > 1 ? (
             <button
               onClick={() =>
@@ -37,12 +38,13 @@ const Cart = (props) => {
                 dispatch({ type: "REMOVE_ITEM", payload: props.data })
               }
             >
-              <i className="fa fa-trash"></i>
+              <FontAwesomeIcon icon={faTrashAlt} />
+
             </button>
           )}
         </div>
       </div>
-      <p className="price-cart-shop">{new_price} $</p>
+      <p className={style.price_cart_shop}>{new_price} $</p>
     </div>
   );
 };

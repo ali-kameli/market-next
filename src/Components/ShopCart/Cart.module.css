@@ -1,4 +1,4 @@
-.cart-basket-container {
+.cart_basket_container {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -22,7 +22,7 @@
   margin-bottom: 3rem;
 }
 
-.price-cart-shop {
+.price_cart_shop {
   color: #34a853;
   font-weight: bold;
   margin-top: auto;
@@ -39,10 +39,10 @@
   place-content: center;
   align-self: center;
 }
-.buttonContainer-cart {
+.buttonContainer_cart {
   display: flex !important;
 }
-.buttonContainer-cart button {
+.buttonContainer_cart button {
   border: none;
   color: #858483;
   background: #ffffff;
@@ -58,6 +58,6 @@
   margin-left: 5px;
 }
 
-.buttonContainer-cart img {
+.buttonContainer_cart img {
   width: 20px;
 }
