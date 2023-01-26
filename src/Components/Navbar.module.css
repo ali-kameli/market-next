@@ -4,6 +4,7 @@
      padding: 8px 19px;
      border-radius: 8px 0 0 8px;
      position: relative;
+     width: 100% !important;
  }
 
  .navbar_input:hover {
@@ -11,8 +12,8 @@
  }
 
  .ul_login {
-     padding-right: 0;
-     padding-left: 10px !important;
+     /* padding-right: 0; */
+     padding: 0 10px !important;
      display: flex;
      font-size: smaller;
      margin-top: 10px !important;
@@ -79,6 +80,13 @@
      display: flex;
  }
 
+ .icon_multiple {
+     position: absolute;
+     top: 11px;
+     right: 7px;
+     z-index: 1;
+ }
+
  .has-search .form-control-feedback {
      position: absolute;
      z-index: 51;
@@ -123,14 +131,30 @@
      color: white;
  }
 
+ .search {
+     /* display: block; */
+     position: relative;
+ }
+
+ .search_product {
+     height: fit-content;
+     max-height: 200px;
+     overflow-y: scroll;
+     background: #ffffff;
+     padding: 8px;
+     border-radius: 8px;
+     position: absolute;
+     z-index: 1;
+ }
+
  @media (min-width:1200px) {
      .form_inline {
-         width: calc(50% - 154px) !important;
+         width: calc(32% - 154px) !important;
      }
 
-     .navbar_input {
+     /* .navbar_input {
          width: calc(100% - 120px) !important;
-     }
+     } */
  }
 
  @media (max-width:1200px) and (min-width:425px) {
@@ -138,9 +162,9 @@
          width: calc(100% - 154px) !important;
      }
 
-     .navbar_input {
+     /* .navbar_input {
          width: calc(100% - 120px) !important;
-     }
+     } */
  }
 
  @media (max-width:426px) {
@@ -148,9 +172,9 @@
          padding: 10px !important;
      }
 
-     .navbar_input {
+     /* .navbar_input {
          width: calc(100% - 120px) !important;
-     }
+     } */
 
      .navbar_brand {
          width: 100%;

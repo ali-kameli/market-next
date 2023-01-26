@@ -6,39 +6,38 @@ import style from "./ShopCart.module.css";
 
 const ShopCart = () => {
   const { state, dispatch } = useContext(CartContext);
-
   return (
     <div className={`container-fluid pt-5 ${style.container_shopcart}`}>
       <div className={`row ${style.row}`}>
-        <div className={`col-12 col-md-7  m-0 p-0 ${style.cartContainer}`}>
+        <div className={`col-11 col-md-7 col-xl-4  m-0 p-0 ${style.cartContainer}`}>
           {state.selectedItems.map((item) => (
             <Cart key={item.id} data={item} />
           ))}
         </div>
-        <div className="col-12 col-md-3 p-0 m-0">
+        <div className="col-11 col-md-3 p-0 m-0">
           {state.itemsCounter > 0 && (
             <div className={style.payments}>
               <p className={style.much_counter_cart}>
                 <span className={style.much_counter_cart}>Number of products : </span>
                 {state.itemsCounter}
               </p>
-              <p className={style.much_counter_cart}>
+              {/* <p className={style.much_counter_cart}>
                 <span className={style.much_counter_cart}>Price of products : </span>
                 <span>
-                  {state.total.length > 3 ? state.total.toLocaleString() : state.total} <small>$</small>
+                  {state.total} <small>$</small>
                 </span>
               </p>
               <p className={style.much_counter_cart}>
                 <span className={style.much_counter_cart}>Discount of products: </span>
                 <span className={style.off_counter_cart}>
-                  (%50) {state.total.length > 3 ? state.total.toLocaleString() : state.total} <small>$</small>
+                  {state.discount} <small>$</small>
                 </span>
               </p>
-              <hr />
+              <hr /> */}
               <p className={style.basket_counter_cart}>
                 <span className={style.basket_counter_cart}>Total: </span>
                 <span>
-                  {state.total.length > 3 ? state.total.toLocaleString() : state.total} <small>$</small>
+                  {state.total}<small>$</small>
                 </span>
               </p>
               <div className={style.buttonContainer}>

@@ -21,7 +21,7 @@ import Image from "next/image";
 import style from "./Productcss.module.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartArrowDown, faHeart, faShareNodes } from "@fortawesome/free-solid-svg-icons";
-import { Rating } from "@mui/material"; 
+import { Rating } from "@mui/material";
 
 
 const Product = ({ productData }) => {

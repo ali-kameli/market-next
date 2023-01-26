@@ -9,7 +9,7 @@ import { faTrashAlt } from "@fortawesome/free-solid-svg-icons";
 const Cart = (props) => {
   const { dispatch } = useContext(CartContext);
 
-  const { image, title, new_price, quantity } = props.data;
+  const { image, title, new_price, old_price, quantity } = props.data;
 
   return (
     <div className={style.cart_basket_container}>
@@ -39,12 +39,17 @@ const Cart = (props) => {
               }
             >
               <FontAwesomeIcon icon={faTrashAlt} />
-
             </button>
           )}
         </div>
+        <p className={style.price_cart_shop}>
+          {
+            old_price &&
+            <span className={style.old_price_cart_shop}><small><del>({old_price} $)</del></small></span>
+          }
+          {new_price} $
+        </p>
       </div>
-      <p className={style.price_cart_shop}>{new_price} $</p>
     </div>
   );
 };
