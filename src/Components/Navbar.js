@@ -51,7 +51,7 @@ const NavbarSection = () => {
                             search &&
                             <div className={style.search_product}>
                                 {searchProducts.map(product => (
-                                    <div>
+                                    <div key={product.id}>
                                         <div>
                                             <Link href={`/${product.id}`} passHref>
                                                 <span>
