@@ -27,13 +27,13 @@ const Landing = () => {
               <div className="carousel-inner">
                 <div className={`carousel-item ${style.carousel_item} active`}>
                   <Image layout="fill"
-                    src='/assets/banner/samsung-banner.webp'
+                    src='/assets/banner/zfold.webp'
                     alt="banner"
                     className="d-block w-100"
                   />
                 </div>
                 <div className={`carousel-item ${style.carousel_item}`}>
-                  <Image layout="fill" src='/assets/banner/home.jpg' alt="img3" className="d-block w-100" />
+                  <Image layout="fill" src='/assets/banner/b1.jpg' alt="img3" className="d-block w-100" />
                 </div>
                 <div className={`carousel-item ${style.carousel_item} `}>
                   <Image layout="fill" src='/assets/banner/b2.jpg' alt="img2" className="d-block w-100" />
