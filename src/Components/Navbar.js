@@ -65,20 +65,6 @@ const NavbarSection = () => {
                             </div>
                         }
                     </span>
-                    <ul className={`mt-1 ${style.ul_login}`}>
-                        <span>
-                            <FontAwesomeIcon icon={faUser} className={style.fa_user_navbar} />
-                        </span>
-                        <div className={style.login}>
-                            <Link
-                                activeStyle={{ color: "skyblue" }}
-                                className={`nav-link px-1 ${style.login_navbar}`}
-                                href="/login"
-                            >
-                                Login
-                            </Link>
-                        </div>
-                    </ul>
                     <Link href="/cart">
                         <span className={style.cart_navbar}>
                             <FontAwesomeIcon icon={faBasketShopping} className={style.shopping_cart_navbar} />

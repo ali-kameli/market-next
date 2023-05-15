@@ -70,6 +70,7 @@
  .cart_navbar {
      display: flex;
      align-self: baseline;
+     margin-left: 10px;
  }
 
  .login_navbar:hover {
