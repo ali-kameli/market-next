@@ -4,9 +4,9 @@ import NavbarSection from "./Navbar";
 const Layout = ({children}) => {
     return ( 
         <>
-        <NavbarSection />
+        {/* <NavbarSection /> */}
         {children}
-        <Footer/>
+        {/* <Footer/> */}
         </>
      );
 }
