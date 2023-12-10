@@ -22,6 +22,7 @@ const Landing = () => {
       </SwiperSlide>
     );
   });
+  
   return (
     <div>
       <div className={`container-fluid  my-3 ${style.landing_body} `}>
