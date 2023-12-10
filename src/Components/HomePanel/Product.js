@@ -57,8 +57,7 @@ const Product = ({ productData }) => {
           </del>
         }
       </div>
-      <div className={style.product_btns}>
-        <span className={style.product_new_price}>
+        <div className={`${style.product_new_price} d-flex ps-2 text-left`}>
           ${" "} {productData.new_price}
           {
             productData.old_price &&
@@ -69,7 +68,8 @@ const Product = ({ productData }) => {
             </span>
 
           }
-        </span>
+        </div>
+      <div className={style.product_btns}>
         <div id={style.productBtns}>
           <span className={style.product_buy_btn}>
 

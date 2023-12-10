@@ -43,10 +43,10 @@ const Off = () => {
           <Swiper
             spaceBetween={20}
             // centeredSlides={true}
-            // autoplay={{
-            //   delay: 3000,
-            //   disableOnInteraction: false,
-            // }}
+            autoplay={{
+              delay: 3000,
+              disableOnInteraction: false,
+            }}
             pagination={{
               clickable: true,
             }}
@@ -55,10 +55,13 @@ const Off = () => {
             className={style.swiper}
             breakpoints={{
               0: {
-                slidesPerView: 6,
+                slidesPerView: 1,
               },
-              400: {
-                slidesPerView: 3,
+              500: {
+                slidesPerView: 2,
+              },
+              992:{
+                slidesPerView: 4,
               },
               2500: {
                 slidesPerView: 5,
