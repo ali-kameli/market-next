@@ -4,7 +4,7 @@ import NavbarSection from "./Navbar";
 const Layout = ({ children }) => {
   return (
     <>
-      {/* <NavbarSection /> */}
+      <NavbarSection />
       <div className="container">{children}</div>
       <Footer />
     </>

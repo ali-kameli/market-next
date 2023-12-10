@@ -23,7 +23,7 @@ const NavbarSection = () => {
     return (
         <div>
             <nav className={`navbar justify-content-between px-3`}>
-                <a className={`navbar-brand ${style.navbar_brand}`}>
+                <div className={`navbar-brand ${style.navbar_brand}`}>
                     <Link
                         className={style.navbar_logo}
                         href="/"
@@ -35,7 +35,7 @@ const NavbarSection = () => {
                             height={21}
                         />
                     </Link>
-                </a>
+                </div>
                 <form className={`form-inline ${style.form_inline}`}>
                     <span className={style.search}>
 
