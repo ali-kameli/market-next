@@ -1,10 +1,16 @@
 .off_landing {
   background-color: #a60025 !important;
 }
-
+.store_product {
+  text-align: center;
+  margin-right: 15px;
+  text-align: -webkit-center;
+  position: relative;
+  width: auto;
+}
 .text_off {
   font-size: x-large;
-  font-family: "Nexa-Bold";
+  font-family: monospace;
   color: white;
 }
 
@@ -13,7 +19,7 @@
 }
 
 .img_off {
-  height: 15rem !important;
+  height: auto !important;
 }
 
 .off_resp {
@@ -43,8 +49,7 @@
   background: #b50034;
 }
 
-
-@media (max-width:768px) {
+@media (max-width: 768px) {
   .off_side {
     display: flex;
     flex-direction: column;

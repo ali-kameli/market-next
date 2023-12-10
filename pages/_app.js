@@ -69,7 +69,6 @@ const App = ({ Component, pageProps }) => {
         <meta name="twitter:description" content="Digi Market" />
         <link rel="canonical" href="https://www.dg-market.coode.ir"></link>
       </Head>
-      <div className="container">
         <ProductsContextProvider>
           <CartContextProvider>
             <ToastContainer />
@@ -78,7 +77,6 @@ const App = ({ Component, pageProps }) => {
             </Layout>
           </CartContextProvider>
         </ProductsContextProvider>
-      </div>
     </>
   );
 };

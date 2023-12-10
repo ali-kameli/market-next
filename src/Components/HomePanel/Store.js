@@ -36,7 +36,7 @@ const Store = (props) => {
             {/* {pathname === "/products" ? <Landing /> : null} */}
 
             <div className={`container-fluid  ${style.container_store_product}`}>
-                <div className="row" style={{ textAlign: "center", justifyContent: "center" }}>
+                {/* <div className="row" style={{ textAlign: "center", justifyContent: "center" }}>
                     <span className={`${style.ad_image_landing}`}>
                         <Image
 
@@ -55,7 +55,7 @@ const Store = (props) => {
                             alt="samsung-galaxy"
                         />
                     </span>
-                </div>
+                </div> */}
                 <div
                     className="my-3 py-2"
                     id={style.stor_sort_list}

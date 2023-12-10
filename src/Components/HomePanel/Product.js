@@ -42,7 +42,7 @@ const Product = ({ productData }) => {
     <div className={` my-3 pt-4 pb-1 ${style.product_cart}`}>
       <Link href={`/${productData.id}`} className={style.link_product} passHref>
         <span>
-          <Image src={productData.image} alt="product" className="p-3 mb-3" width={170} height={167} />
+          <Image src={productData.image} alt="product" className={`p-3 mb-3 ${style.product_image}`} width={170} height={180} />
           <Rating name="read-only" value={productData.rate} readOnly />
           <p style={{ fontSize: "smaller", height: "2.5rem" }}>
             {productData.title}

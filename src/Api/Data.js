@@ -17,11 +17,6 @@ export class Data {
         name: "24 Hour Return Policy",
       },
       {
-        id: 4,
-        image: "/assets/service/service4.png",
-        name: "24 Hour Return Policy",
-      },
-      {
         id: 5,
         image: "/assets/service/service5.png",
         name: "Next Level Pro Quality",
@@ -134,7 +129,7 @@ export class Data {
       },
       {
         id: 4,
-        image: "/assets/products/iphone-se-00.jpg",
+        image: "/assets/products/iphone-se.jpg",
         title: "iPhone SE 2022 JA",
         rate: 4.7,
         description: [
@@ -156,7 +151,7 @@ export class Data {
       },
       {
         id: 5,
-        image: "/assets/products/iphone11-ch-0.jpg",
+        image: "/assets/products/iPhone-11-CH.jpg",
         title: "iPhone 11 CH",
         rate: 4.3,
         description: [
@@ -179,7 +174,7 @@ export class Data {
       },
       {
         id: 6,
-        image: "/assets/products/iphone-xs-max-0.jpg",
+        image: "/assets/products/iphone-xs-max.jpg",
         title: "iPhone XS Max",
         rate: 3.6,
         description: [
@@ -202,7 +197,7 @@ export class Data {
       },
       {
         id: 7,
-        image: "/assets/products/samsung-zfold4.jpg",
+        image: "/assets/products/galaxy-z-fold4.webp",
         title: "Galaxy Z Fold4 ",
         rate: 4.7,
         description: [
@@ -244,7 +239,7 @@ export class Data {
       },
       {
         id: 9,
-        image: "/assets/products/iphone-xs-max-0.jpg",
+        image: "/assets/products/iphone-xs-max.jpg",
         title: "iPhone XS Max",
         rate: 3.6,
         description: [
